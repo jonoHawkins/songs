@@ -1,0 +1,9 @@
+<div class="s-chordChart"><h1><%- song.title %></h1><div class="o-chordChart"><%
+        song.chart.forEach(function(stanza){
+        %><div class="o-chordChart__stanza"><h2><%- stanza.name %></h2><% 
+                stanza.content.forEach(function(line){
+                %><p class="o-chordChart__<%- line.type %>"><%- line.content %></p><% 
+                });
+        %></div><%
+        });
+%></div>

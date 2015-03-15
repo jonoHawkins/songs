@@ -1,0 +1,7 @@
+<ul class="o-topNav">
+<% playlist.songs.forEach(function (plItem, index) {%>
+    <li class="o-topNav__item<%= index == page ? ' o-topNav__item--selected' : '' %>">
+        <a href="<%=index%>" class="o-topNav__link"><%=plItem.name.replace(/-/g, ' ')%></a>
+    </li>
+<%}); %>
+</ul>

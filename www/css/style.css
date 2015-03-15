@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0 0 20px;
+  padding: 0;
+  background: #333;
+  color: #818C97;
+  font-family: "Courier New", "PT Mono", monospace;
+  font-size: 14px;
+  line-height: 19.6px; }
+
+h1,
+h2 {
+  color: #99ACB8; }
+
+h1 {
+  font-size: 18.2px;
+  line-height: 25.48px;
+  width: 100%;
+  text-align: center; }
+
+h2 {
+  font-size: 16.8px;
+  line-height: 23.52px; }
+
+pre {
+  padding: 0 1em; }
+
+a {
+  color: #2F6DCD;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+textarea,
+input {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 1em;
+  background: #818C97;
+  color: #333;
+  font-family: "Courier New", "PT Mono", monospace;
+  font-size: 14px;
+  line-height: 1.4em;
+  border: none;
+  outline: none; }
+  textarea:focus,
+  input:focus {
+    background: #D67A7A; }
+
+textarea {
+  min-height: 400px;
+  max-width: 100%; }
+
+.label__text {
+  display: block;
+  padding: 0.6em; }
+
+.btn {
+  display: block;
+  margin: 0;
+  width: 100%;
+  padding: 1em;
+  background: #bf393e;
+  border: 0;
+  color: #cad9e4;
+  font-family: "Courier New", "PT Mono", monospace;
+  font-size: 1em;
+  text-align: center;
+  cursor: pointer;
+  outline: none; }
+  .btn:active {
+    background: #ab3338; }
+  .btn:focus {
+    font-weight: bold;
+    color: #fff; }
+
+.o-topNav {
+  display: flex;
+  background: #444;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .o-topNav .o-topNav__item {
+    display: block; }
+
+.o-topNav .o-topNav__link {
+  display: block;
+  margin: 0;
+  width: 100%;
+  padding: 4px 8px;
+  background: #444;
+  border: 0;
+  color: #cad9e4;
+  font-family: "Courier New", "PT Mono", monospace;
+  font-size: 0.8em;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  text-transform: capitalize; }
+  .o-topNav .o-topNav__link:active {
+    background: #ab3338; }
+  .o-topNav .o-topNav__link:focus {
+    font-weight: bold;
+    color: #fff; }
+.o-topNav .o-topNav__item + .o-topNav__item {
+  border-left: 1px solid #373737; }
+.o-topNav .o-topNav__item--selected .o-topNav__link {
+  background: #bf393e; }
+
+.s-chordChart {
+  font-size: 16.8px;
+  line-height: 23.52px; }
+
+.o-chordChart {
+  height: calc(100vh - 96px);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 2em;
+  white-space: pre; }
+
+.o-chordChart .o-chordChart__stanza {
+  max-width: 450px;
+  padding-left: 2em; }
+.o-chordChart .o-chordChart__chords {
+  margin: 0;
+  color: #D67A7A; }
+.o-chordChart .o-chordChart__lyrics {
+  margin: 0; }
+
+/*# sourceMappingURL=style.css.map */

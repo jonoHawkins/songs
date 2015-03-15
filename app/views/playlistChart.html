@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Songs<%= pageTitle ? ': ' + pageTitle : ''; %></title>
+    <meta name="charset" content="utf8">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+<%- include('partials/playlistNav.html'); %>
+<% if (song) { %>
+<%- include('partials/chordChart.html', {song: song}); %>
+<% } %>
+
+<% if (err) { %>
+<%= err %>
+<% } %>
+</div>
+
+<script type="text/javascript">
+/*global window, document*/
+var keys = {
+        next: 39,
+        prev: 37
+    };
+
+window.addEventListener('keydown', function (e) {
+    if (e.keyCode === keys.next) {
+        window.location.href = <%= nextPage %>;
+    } else if (e.keyCode === keys.prev) {
+        window.location.href = <%= prevPage %>;
+    }
+});
+</script>
+</body>
+</html>

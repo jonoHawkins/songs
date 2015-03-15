@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Songs<%= pageTitle ? ': ' + pageTitle : ''; %></title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+<form action="/chart/new" method="POST">
+    <label>
+        <p>Chart Name</p>
+        <input type="text" name="name" value="test">
+    </label>
+    <br>
+    <label>
+        <p>Chart</p>
+        <textarea name="chart" cols="50" rows="25">
+Am
+Test
+        </textarea>
+    </label>
+    <br>
+    <button type="submit" class="btn">GO</button>
+</form>
+</body>
+</html>
