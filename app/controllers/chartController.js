@@ -9,7 +9,7 @@ chartControler.newChartForm = function (req, res) {
 };
 
 chartControler.postNewChart = function (req, res) {
-    chartModel.update(req.body.name, processor.chordChart(req.body.chart))
+    chartModel.new(req.body.name, processor.chordChart(req.body.chart))
         .then(function () {
             res.redirect('/chart/view/' + stringUtils.toUrl(req.body.name));
         }, function (err) {
@@ -20,6 +20,7 @@ chartControler.postNewChart = function (req, res) {
 chartControler.listAction = function (req, res) {
     chartModel.list()
         .then(function (list) {
+            console.log(list);
             res.render('chartList.html', {
                 pageTitle: 'Songs List',
                 songsList: list
@@ -34,7 +35,7 @@ chartControler.viewChart = function (req, res) {
         .then(function (chart) {
             res.render('chart.html', {
                 pageTitle: chart.title + ' (View)',
-                song: chart
+                song: chart.data
             });
         }, function (err) {
             res.send(err);

@@ -2,8 +2,8 @@ var express = require('express'),
     path = require('path'),
     bodyParser = require('body-parser'),
     routes = require('./app/routes'),
-
-    app = express();
+    app = express(),
+    server;
 
 app.use(bodyParser.urlencoded());
 // we are specifying the html directory as another public directory
@@ -14,10 +14,10 @@ app.set('views', path.join(__dirname, 'app/views'));
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
-
 app.use('/', routes);
 
-var server = app.listen(1337, function () {
+
+server = app.listen(1337, function () {
     var host = server.address().address,
         port = server.address().port;
 
